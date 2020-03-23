@@ -72,6 +72,7 @@ function withPagination({
       paranoid = true,
       nest  = false,
       mapToModel  = false,
+      separate  = false, 
       subQuery,
       ...queryArgs
     } = {}) => {
@@ -122,6 +123,7 @@ function withPagination({
           paranoid,
           nest,
           mapToModel,
+          separate,
           ...(typeof subQuery === 'boolean' && { subQuery }),
           ...queryArgs,
         })
